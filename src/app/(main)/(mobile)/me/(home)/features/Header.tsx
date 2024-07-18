@@ -19,10 +19,14 @@ const Header = memo(() => {
         <ActionIcon
           icon={theme.isDarkMode ? Moon : Sun}
           onClick={() => switchThemeMode(theme.isDarkMode ? 'light' : 'dark')}
-          size={MOBILE_HEADER_ICON_SIZE}
+          size={MOBILE_HEADER_ICON_SIZE + 4}
         />
       }
-      style={mobileHeaderSticky}
+      style={{
+        ...mobileHeaderSticky,
+        backgroundColor: theme.colorBgContainer,
+        borderBottom: `1px solid ${theme.colorBorder}`,
+      }}
     />
   );
 });

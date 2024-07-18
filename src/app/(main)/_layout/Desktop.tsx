@@ -23,8 +23,10 @@ const Layout = memo<LayoutProps>(({ children, nav }) => {
         height={showCloudPromotion ? `calc(100% - ${BANNER_HEIGHT}px)` : '100%'}
         horizontal
         style={{
-          borderTop: isPWA ? `1px solid ${theme.colorBorder}` : undefined,
+          borderTop: isPWA ? `2px solid ${theme.colorPrimary}` : undefined,
           position: 'relative',
+          backgroundColor: theme.colorBgContainer,
+          padding: '16px',
         }}
         width={'100%'}
       >
